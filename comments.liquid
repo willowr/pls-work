@@ -1,0 +1,8 @@
+---
+permalink: "comments.json"
+---
+[
+    {% for link in comments %}
+        {{ link }}{% if forloop.last %}{% else %},{% endif %}
+    {% endfor %}
+]
