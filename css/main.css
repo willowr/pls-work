@@ -91,19 +91,22 @@ a.site-nav-item:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  text-align: center;
 }
 
 .parallax-title {
-  display: inline-block;
-  margin: 20vw 0 0 0;
+  position: fixed;
+  top: 40vh;
+  left: 50%;
+  margin: 0 0 0 0;
   color: #fff;
   font-size: 36px;
 }
 
 .parallax-subtitle {
-  display: inline-block;
-  margin: 5vw 0 0 0;
+  position: fixed;
+  top: 50vh;
+  left: 50%;
+  margin: 0 0 0 0;
   color: #fff;
   opacity: 0.8;
   font-size: 24px;

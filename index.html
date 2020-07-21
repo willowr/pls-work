@@ -24,12 +24,12 @@
         </div>
         <div class="site-nav">
           <div class="site-nav-left">
-            <a class="site-nav-item" href="../">Home</a>
-            <a class="site-nav-item" href="../posts/">Posts</a>
-            <a class="site-nav-item" href="../archive/">Archive</a>
+            <a class="site-nav-item" href="../../">Home</a>
+            <a class="site-nav-item" href="../../posts/">Posts</a>
+            <a class="site-nav-item" href="../../archive/">Archive</a>
           </div>
           <div class="site-nav-right">
-            <a class="site-nav-item" href="../about/">About</a>
+            <a class="site-nav-item" href="../../about/">About</a>
           </div>
         </div>
       </div>
@@ -38,5 +38,13 @@
       <div class="parallax-title" id="ptitle">Relive</div>
       <div class="parallax-subtitle" id="psubtitle">oars</div>
     </div>
+    <script type="text/javascript">
+      $(function() {
+        var hm = -1 * document.getElementById('ptitle').clientWidth / 2;
+        var hmm = -1 * document.getElementById('psubtitle').clientWidth / 2;
+        document.getElementById('ptitle').style.marginLeft = hm.toString() + "px";
+        document.getElementById('psubtitle').style.marginLeft = hmm.toString() + "px";
+      });
+    </script>
   </body>
 </html>
