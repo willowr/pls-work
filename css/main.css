@@ -1,0 +1,225 @@
+header {
+  display: block;
+}
+
+main {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  border: 0;
+  vertical-align: middle;
+  height: auto;
+}
+
+a {
+  color: #000;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+.site-header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  background: #000;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 4vw;
+}
+
+.site-mast {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-mast-left {
+  display: flex;
+}
+
+.site-mast-right {
+  display: flex;
+  align-items: center;
+}
+
+.site-logo {
+  height: 30px;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 0 0 0;
+}
+
+.site-nav-left {
+  margin: 0 20px 0 -10px;
+}
+
+.site-nav-right {
+}
+
+.site-nav-item {
+  display: inline-block;
+  padding: 5px 10px;
+  color: #fff;
+  opacity: 0.7;
+}
+
+a.site-nav-item:hover {
+  opacity: 0.9;
+}
+
+.parallax {
+  background-image: url("../images/fire_cat.jpg");
+  height: 80vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax-title {
+  position: fixed;
+  top: 40vh;
+  left: 50%;
+  margin: 0 0 0 0;
+  color: #fff;
+  font-size: 36px;
+}
+
+.parallax-subtitle {
+  position: fixed;
+  top: 50vh;
+  left: 50%;
+  margin: 0 0 0 0;
+  color: #fff;
+  opacity: 0.8;
+  font-size: 24px;
+}
+
+.site-main {
+  padding: 4vw 0;
+}
+
+.post-information {
+  padding: 2vw 0;
+}
+
+.post-info-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post-info-middle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post-info-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post-info-item {
+  display: inline-block;
+  padding: 10px 0;
+  color: #000;
+}
+
+.post-content {
+  padding: 2vw 0;
+}
+
+.comments-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.enter-comment-container {
+
+}
+
+.comments-list-container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 4vw;
+}
+
+.no-comments-box {
+
+}
+
+.a-comment {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 2  vw;
+}
+
+.a-comment-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2vw;
+}
+
+.a-comment-author {
+  display: flex;
+  margin: 0 20px 0 -10px;
+  font-weight: bold;
+}
+
+.a-comment-date {
+  display: flex;
+  align-items: center;
+}
+
+.a-comment-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 0 0 0;
+}
+
+.a-comment-comment {
+  margin: 0 20px 0 -10px;
+  padding-left: 2vw;
+  border-left: 2px solid #f2f2f2;
+  white-space: pre;
+}
+
+.a-comment-reply {
+}
+
+
+
+a, abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, canvas, caption, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h3, h4, h5, h6, header, hgroup, html, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+::selection {
+    text-shadow: none;
+    background: #cbeafb;
+}

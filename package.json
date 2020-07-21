@@ -1,0 +1,20 @@
+{
+  "name": "asdf",
+  "version": "1.0.0",
+  "description": "hi",
+  "main": ".eleventy.js",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "cheerio": "^1.0.0-rc.3",
+    "faunadb": "^2.14.2",
+    "netlify-lambda": "^2.0.1",
+    "request-promise": "^4.2.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "npx netlify-lambda build lambda --config ./webpack.functions.js && npx @11ty/eleventy",
+    "serve": "npx netlify-lambda build lambda --config ./webpack.functions.js && npx @11ty/eleventy --serve"
+  },
+  "author": "",
+  "license": "ISC"
+}
