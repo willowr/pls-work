@@ -1,11 +1,13 @@
 let comments;
 
-const fetchComments = () => {
-  comments = fetch('../../comments.json')
+const fetchComments = async () => {
+  comments =await fetch('../../comments.json')
     .then(response => response.json())
     .catch(err => err)
   return true;
 }
+
+fetchComments();
 
 function addPost(author, date, content) {
   return `
@@ -41,5 +43,3 @@ function showComments(page_id) {
     }
   }
 }
-
-fetchComments();
