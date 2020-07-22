@@ -170,14 +170,18 @@ a.site-nav-item:hover {
 .a-comment {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 0 2  vw;
+  padding: 1vw 2vw;
 }
 
 .a-comment-top {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content:flex-start;
   padding-left: 2vw;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  background-color: #e4e7eb;
+  border-top:1px solid #778899
 }
 
 .a-comment-author {

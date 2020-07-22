@@ -1,14 +1,22 @@
-let comments = [];
+var comments = [];
 
-const fetchComments = async () => {
-  console.log("Fetching comments from comments.json");
-  comments =await fetch('../../comments.json')
-    .then(response => response.json())
-    .catch(err => err)
+const fetchComments = async (page_id) => {
+  if (comments.length == 0) {
+    console.log("Fetching comments from comments.json");
+    comments =await fetch('./comments.json')
+      .then(response => response.json())
+      .catch(err => err)
+    console.log("Finished fetching comments from comments.json");
+    console.log(comments);
+    showComments(page_id);
+  }
+  else
+  {
+    showComments(page_id);
+  }
+
   return true;
 }
-
-fetchComments();
 
 function addPost(author, date, content) {
   return `
@@ -26,6 +34,9 @@ function showComments(page_id) {
   var a = document.getElementById("cmtslc");
   let filtered = [];
   console.log("Filtered comments by page_id");
+  console.log("Comments is of type " + typeof comments + " before the line filtered = comments.filter(blah)");
+  console.log(comments);
+  console.log("Above is what comments is right now");
   filtered = comments.filter(comment => {
     return comment.id == page_id;
   });
@@ -43,4 +54,4 @@ function showComments(page_id) {
       a.appendChild(tag);
     }
   }
-}
+} 
