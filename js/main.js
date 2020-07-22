@@ -3,7 +3,7 @@ var comments = [];
 const fetchComments = async (page_id) => {
   if (comments.length == 0) {
     console.log("Fetching comments from comments.json");
-    comments =await fetch('./comments.json')
+    comments =await fetch('/comments.json')
       .then(response => response.json())
       .catch(err => err)
     console.log("Finished fetching comments from comments.json");
@@ -54,4 +54,4 @@ function showComments(page_id) {
       a.appendChild(tag);
     }
   }
-} 
+}
