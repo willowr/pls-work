@@ -1,5 +1,5 @@
 import { getDetails, saveComment } from "./comments/create";
-import { rebuildSite } from "./utilities/rebuild";
+//import { rebuildSite } from "./utilities/rebuild";
 
 exports.handler = async function(event, context) {
   try {
@@ -11,7 +11,7 @@ exports.handler = async function(event, context) {
     const savedResponse = await saveComment({url, ...details});
 
     if (savedResponse.statusCode === 200) {
-      //await rebuildSite();
+    //  await rebuildSite();
       return { statusCode: 200, body: savedResponse.body }
     } else {
       return savedResponse
