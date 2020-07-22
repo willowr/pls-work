@@ -83,13 +83,8 @@ function enterComment(id) {
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'https://api.netlify.com/build_hooks/5f1763a35ec623022373884d', true);
     xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === 4 && xhr.status === 200) {
-        var res = JSON.parse(xhr.response);
-        console.log(res);
-      }
-    };
     xhr.send(JSON.stringify({}));
+    console.log("We hit that webhook yeet pls refresh the page to seee your comment btw");
   }).catch((error) => {
     console.log("API error", error)
   })
