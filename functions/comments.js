@@ -9,7 +9,7 @@ exports.handler = function(event, context, callback) {
     data: data
   }
 
-  return client.query(q.Create(q.Collection('comments'), data))
+  return client.query(q.Create(q.Collection('comments'), comment))
     .then((response) => {
       console.log("Success", response)
       return callback(null, {
