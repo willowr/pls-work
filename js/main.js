@@ -67,10 +67,15 @@ function createComment(data) {
 
 function enterComment(id) {
   var form = document.getElementById("enter-comment");
+  var today = new Date();
+  var dd = String(today.getDate()).padStart(2, '0');
+  var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+  var yyyy = today.getFullYear();
+  today = mm + '/' + dd + '/' + yyyy;
   const myComment = {
     id: id,
     author_name: form.elements["author_name"].value,
-    comment_date: todayDate,
+    comment_date: today,
     comment_content: form.elements["new_comment"].value
   }
   createComment(myComment).then((response) => {
