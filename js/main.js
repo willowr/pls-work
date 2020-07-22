@@ -21,7 +21,7 @@ function addPost(author, date, content) {
 
 
 function showComments(page_id) {
-  var a = document.getElementById(#cmtslc);
+  var a = document.getElementById("cmtslc");
   let filtered = [];
   filtered = comments.filter(comment => {
     return comment.id == page_id;
