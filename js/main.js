@@ -1,4 +1,4 @@
-let comments;
+let comments = [];
 
 const fetchComments = async () => {
   comments =await fetch('../../comments.json')
@@ -20,7 +20,6 @@ function addPost(author, date, content) {
     </div>
   `
 }
-
 
 function showComments(page_id) {
   var a = document.getElementById("cmtslc");
