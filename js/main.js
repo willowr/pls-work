@@ -89,7 +89,7 @@ function enterComment(id) {
         console.log(res);
       }
     };
-    xhr.send(JSON.stringify(data));
+    xhr.send(JSON.stringify({}));
   }).catch((error) => {
     console.log("API error", error)
   })
