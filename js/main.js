@@ -42,6 +42,4 @@ function showComments(page_id) {
   }
 }
 
-(function() {
-  fetchComments();
-})
+fetchComments();
