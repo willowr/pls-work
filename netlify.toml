@@ -1,4 +1,4 @@
 [build]
-  command = "npm run build"
+  command = "npx netlify-lambda build lambda --config ./webpack.functions.js && npx @11ty/eleventy"
   functions = "functions"
   publish = "_site"
