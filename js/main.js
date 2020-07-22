@@ -80,6 +80,16 @@ function enterComment(id) {
   }
   createComment(myComment).then((response) => {
     console.log("API response", response)
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'https://api.netlify.com/build_hooks/5f1763a35ec623022373884d', true);
+    xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        var res = JSON.parse(xhr.response);
+        console.log(res);
+      }
+    };
+    xhr.send(JSON.stringify(data));
   }).catch((error) => {
     console.log("API error", error)
   })
