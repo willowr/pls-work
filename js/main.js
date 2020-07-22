@@ -1,6 +1,7 @@
 let comments = [];
 
 const fetchComments = async () => {
+  console.log("Fetching comments from comments.json");
   comments =await fetch('../../comments.json')
     .then(response => response.json())
     .catch(err => err)
@@ -24,6 +25,7 @@ function addPost(author, date, content) {
 function showComments(page_id) {
   var a = document.getElementById("cmtslc");
   let filtered = [];
+  console.log("Filtered comments by page_id");
   filtered = comments.filter(comment => {
     return comment.id == page_id;
   });
