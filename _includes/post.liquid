@@ -75,14 +75,14 @@ id: -1
         </div>
         <div class="comments-container">
           <h1 id="comments-total">Comments</h1>
-          <!--<div class="enter-comment-container">
-            <form id="enter-comment" data-netlify="true" name="{{ "enter-comment-form" | append: id}}">
-              Name: <input type="text" name="author_name" maxlength="50">
-              Comment: <br>
-              <textarea name="new_comment" rows="5" cols="75"></textarea>
-              <input type="button" value="Post comment" onclick="enterComment({{ id }})">
+          <div class="enter-comment-container">
+            <form id="enter-comment">
+              Name: <input type="text" name="author_name" maxlength="100" style="width: 100%; max-width: 100%">
+              <br> Comment: <br>
+              <textarea name="new_comment" rows="5" cols="500" style="width: 100%; max-width: 100%;"></textarea>
+              <input type="button" class="post-comment-button" value="Post comment" onclick="enterComment({{ id }})">
             </form>
-          </div>-->
+          </div>
           <div class="comments-list-container", id="cmtslc">
             <!--{% for link in comments %}
               {% if link.author_name and link.comment_date and link.comment_content %}

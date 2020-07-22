@@ -1,25 +1,13 @@
-import { getDetails, saveComment } from "./comments/create";
-//import { rebuildSite } from "./utilities/rebuild";
+const faunadb = require('faunadb'),
+      q = faunadb.query;
+const client = new faunadb.Client({secret: process.env.FAUNADB_SECRET});
 
-exports.handler = async function(event, context) {
-  try {
-    if (event.queryStringParameters.apiKey != process.env.API_KEY) throw "Not Authorized";
-
-    const url = event.queryStringParameters.url;
-
-    const details = await getDetails(url);
-    const savedResponse = await saveComment({url, ...details});
-
-    if (savedResponse.statusCode === 200) {
-    //  await rebuildSite();
-      return { statusCode: 200, body: savedResponse.body }
-    } else {
-      return savedResponse
-    }
-
-
-  } catch (err) {
-    return { statusCode: 500, body: `Error: ${err}` };
+exports.handler = function(event, context) {
+  const data = JSON.parse(event.body);
+  console.log("Function comment-create invoked", data);
+  const comment = {
+    data: data
   }
 
+  return client.query(q.Create(q.Collection('comments'), data));
 };

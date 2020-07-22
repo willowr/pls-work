@@ -55,3 +55,27 @@ function showComments(page_id) {
     }
   }
 }
+
+function createComment(data) {
+  return fetch("/.netlify/functions/comments", {
+    body: JSON.stringify(data),
+    method: 'POST'
+  }).then(response => {
+    return response.json();
+  });
+}
+
+function enterComment(id) {
+  var form = document.getElementById("enter-comment");
+  const myComment = {
+    id: id,
+    author_name: form.elements["author_name"].value,
+    comment_date: todayDate,
+    comment_content: form.elements["new_comment"].value
+  }
+  createComment(myComment).then((response) => {
+    console.log("API response", response)
+  }).catch((error) => {
+    console.log("API error", error)
+  })
+}
