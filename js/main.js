@@ -80,11 +80,7 @@ function enterComment(id) {
   }
   createComment(myComment).then((response) => {
     console.log("API response", response)
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://api.netlify.com/build_hooks/5f1763a35ec623022373884d', true);
-    xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
-    xhr.send(JSON.stringify({}));
-    console.log("We hit that webhook yeet pls refresh the page to seee your comment btw");
+    $.post("https://api.netlify.com/build_hooks/5f1763a35ec623022373884d", function(data) { console.log(data, " let's goo")});
   }).catch((error) => {
     console.log("API error", error)
   })
