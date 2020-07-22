@@ -29,5 +29,5 @@ function mapComments(data) {
 
 module.exports = async function() {
     const data = mapComments(await getComments());
-    return data.reverse()
+    return data;
 }
