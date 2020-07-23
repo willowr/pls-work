@@ -1,3 +1,12 @@
+a, abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, canvas, caption, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h3, h4, h5, h6, header, hgroup, html, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
 header {
   display: block;
 }
@@ -91,6 +100,8 @@ a.site-nav-item:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position:relative;
+  z-index: -1;
 }
 
 .parallax-title {
@@ -186,61 +197,76 @@ a.site-nav-item:hover {
 
 }
 
-.a-comment {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 1vw 2vw;
+.a-thread {
+
 }
 
-.a-comment-top {
-  display: flex;
-  align-items: center;
-  justify-content:flex-start;
-  padding-left: 2vw;
-  padding-top: 1vw;
-  padding-bottom: 1vw;
-  background-color: #e4e7eb;
-  border-top:1px solid #778899
-}
+  .a-comment {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 1vw 2vw;
+  }
 
-.a-comment-author {
-  display: flex;
-  margin: 0 20px 0 -10px;
-  font-weight: bold;
-}
+    .a-comment-top {
+      display: flex;
+      align-items: center;
+      justify-content:flex-start;
+      padding-left: 2vw;
+      padding-top: 1vw;
+      padding-bottom: 1vw;
+      background-color: #e4e7eb;
+      border-top:1px solid #778899
+    }
 
-.a-comment-date {
-  display: flex;
-  align-items: center;
-}
+      .a-comment-author {
+        display: flex;
+        margin: 0 20px 0 -10px;
+        font-weight: bold;
+      }
 
-.a-comment-bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 15px 0 0 0;
-}
+      .a-comment-date {
+        display: flex;
+        align-items: center;
+      }
 
-.a-comment-comment {
-  margin: 0 20px 0 -10px;
-  padding-left: 2vw;
-  border-left: 2px solid #f2f2f2;
-  white-space: pre;
-}
+    .a-comment-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 15px 0 0 0;
+    }
 
-.a-comment-reply {
-}
+      .a-comment-comment {
+        margin: 0 20px 0 -10px;
+        padding-left: 2vw;
+        border-left: 2px solid #f2f2f2;
+        white-space: pre;
+      }
 
+      .a-comment-reply-button {
+        background-color: #adb8c2;
+        border: none;
+        color: white;
+        padding: 1vw 1vw;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+      }
 
+      .a-comment-reply-button:hover {
+        background-color: #e4e7eb;
+        color: #778899;
+        cursor: pointer;
+      }
 
-a, abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, canvas, caption, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h3, h4, h5, h6, header, hgroup, html, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, ul, var, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font: inherit;
-    font-size: 100%;
-    vertical-align: baseline;
-}
+  .a-reply {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 1vw 2vw;
+    padding-left: 4vw;
+  }
+
 
 ::selection {
     text-shadow: none;

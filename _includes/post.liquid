@@ -79,32 +79,15 @@ id: -1
             <form id="enter-comment">
               Name: <input type="text" name="author_name" maxlength="100" style="width: 100%; max-width: 100%">
               <br> Comment: <br>
-                <textarea name="new_comment" rows="5" cols="500" style="width: 100%; max-width: 100%;"></textarea>
-              <input type="button" class="post-comment-button" value="Post comment" onclick="enterComment({{ id }})">
+                  <textarea name="new_comment" rows="5" cols="500" style="width: 100%; max-width: 100%;"></textarea>
+              <input type="button" class="post-comment-button" value="Post comment" onclick="enterComment({{ id }}, 'NONE')">
             </form>
           </div>
           <div class="comments-list-container", id="cmtslc">
-            <!--{% for link in comments %}
-              {% if link.author_name and link.comment_date and link.comment_content %}
-              <div class="a-comment">
-                <div class="a-comment-top">
-                  <div class="a-comment-author">{{ aComment.author }}</div>
-                  <div class="a-comment-date">{{ aComment.date }}</div>
-                </div>
-                <div class="a-comment-bottom">
-                  <div class="a-comment-comment">{{ aComment.comment }}</div>
-                </div>
-              </div>
-              {% endif %}
-            {% endfor %}-->
           </div>
-          <!--<script type="text/javascript" src="../js/comments.js"></script>
           <script type="text/javascript">
-          loadComments({{ id }});
-        </script>-->
-        <script type="text/javascript">
-        fetchComments({{ id }});
-        </script>
+          fetchComments({{ id }});
+          </script>
         </div>
       </div>
     </main>
