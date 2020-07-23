@@ -8,4 +8,7 @@ module.exports = function(config) {
   config.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
   });
+
+  config.addCollection("tagList",
+  require("./views/_11ty/getTagList"));
 }
