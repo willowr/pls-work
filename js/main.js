@@ -18,7 +18,7 @@ const fetchComments = async (page_id) => {
   return true;
 }
 
-function addPost(author, date, content, comment-id, parent) {
+function addPost(author, date, content, comment_id, parent) {
   if (parent == "NONE") {
     return `
     <div class="a-comment">
@@ -28,7 +28,7 @@ function addPost(author, date, content, comment-id, parent) {
       </div>
       <div class="a-comment-bottom">
         <div class="a-comment-comment">${content}</div>
-        <button clas="a-comment-reply-button" type="button" value="Reply" onclick="reply(${comment-id}, ${comment-id})"
+        <button clas="a-comment-reply-button" type="button" value="Reply" onclick="reply(${comment_id}, ${comment_id})"
       </div>
     </div>
     `
@@ -41,7 +41,7 @@ function addPost(author, date, content, comment-id, parent) {
       </div>
       <div class="a-comment-bottom">
         <div class="a-comment-comment">${content}</div>
-        <button type="button" class="a-comment-reply-button" value="Reply" onclick="reply(${comment-id}, ${parent})">
+        <button type="button" class="a-comment-reply-button" value="Reply" onclick="reply(${comment_id}, ${parent})">
       </div>
     `
   }
@@ -142,7 +142,7 @@ function enterComment(id, parent) {
 }
 
 // Add a form to the page to submit a new reply/comment
-function reply(comment-id, parent) {
+function reply(comment_id, parent) {
   var something = `
     <form id="enter-reply">
       Name: <input type="text" name="author_name" maxlength="100" style="width: 100%; max-width: 100%">
@@ -152,6 +152,6 @@ function reply(comment-id, parent) {
     </form>
   `
   var hmm = document.createElement("div"); hmm.className = "enter-comment-container"; hmm.innerHTML = something;
-  var huh = document.getElementById(comment-id);
+  var huh = document.getElementById(comment_id);
   huh.appendChild(hmm);
 }
