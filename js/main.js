@@ -18,7 +18,7 @@ const fetchComments = async (page_id) => {
   return true;
 }
 
-function addPost(author, date, content, comment_id, parent) {
+function addPost(author, date, content, comment_id, parent, page_id) {
   if (parent == "NONE") {
     return `
     <div class="a-comment">
@@ -28,7 +28,7 @@ function addPost(author, date, content, comment_id, parent) {
       </div>
       <div class="a-comment-bottom">
         <div class="a-comment-comment">${content}</div>
-        <button clas="a-comment-reply-button" type="button" value="Reply" onclick="reply(${comment_id}, ${comment_id})"
+        <button clas="a-comment-reply-button" type="button" value="Reply" onclick="reply(${comment_id}, ${comment_id}, ${page_id})"
       </div>
     </div>
     `
@@ -41,7 +41,7 @@ function addPost(author, date, content, comment_id, parent) {
       </div>
       <div class="a-comment-bottom">
         <div class="a-comment-comment">${content}</div>
-        <button type="button" class="a-comment-reply-button" value="Reply" onclick="reply(${comment_id}, ${parent})">
+        <button type="button" class="a-comment-reply-button" value="Reply" onclick="reply(${comment_id}, ${parent}, ${page_id})">
       </div>
     `
   }
@@ -63,7 +63,7 @@ function showComments(page_id) {
 
   else {
     for (var i = 0; i < filtered.length; i++) {
-      something = addPost(filtered[i].author_name, filtered[i].comment_date, filtered[i].comment_content, filtered[i].comment_id, filtered[i].comment_parent);
+      something = addPost(filtered[i].author_name, filtered[i].comment_date, filtered[i].comment_content, filtered[i].comment_id, filtered[i].comment_parent, filtered[i].id);
 
       if (filtered[i].comment_parent == "NONE") {
         var tag = document.createElement("div"); tag.className = "a-thread"; tag.innerHTML = something; tag.id = filtered[i].comment_id;
@@ -139,13 +139,13 @@ function enterComment(id, parent) {
 }
 
 // Add a form to the page to submit a new reply/comment
-function reply(comment_id, parent) {
+function reply(comment_id, parent, page_id) {
   var something = `
     <form id="enter-reply">
       Name: <input type="text" name="author_name" maxlength="100" style="width: 100%; max-width: 100%">
       <br> Reply: <br>
       <textarea name="new_comment" rows="5" cols="500" style="width: 100%; max-width: 100%;"></textarea>
-      <input type="button" class="post-comment-button" value="Post reply" onclick="enterComment({{ id }}, ${parent})">
+      <input type="button" class="post-comment-button" value="Post reply" onclick="enterComment(${page_id}, ${parent})">
     </form>
   `
   var hmm = document.createElement("div"); hmm.className = "enter-comment-container"; hmm.innerHTML = something;
