@@ -7,6 +7,7 @@ author: fluffy
 id: 1
 tags:
   - writing
+  - post
 ---
 
 
