@@ -28,7 +28,7 @@ function addPost(author, date, content, comment_id, parent, page_id) {
       </div>
       <div class="a-comment-bottom">
         <div class="a-comment-comment">${content}</div>
-        <button clas="a-comment-reply-button" type="button" value="Reply" onclick="reply(${comment_id}, ${comment_id}, ${page_id})"
+        <button class="a-comment-reply-button" type="button"  onclick="reply(${comment_id}, ${comment_id}, ${page_id})">Reply</button>
       </div>
     </div>
     `
@@ -41,7 +41,7 @@ function addPost(author, date, content, comment_id, parent, page_id) {
       </div>
       <div class="a-comment-bottom">
         <div class="a-comment-comment">${content}</div>
-        <button type="button" class="a-comment-reply-button" value="Reply" onclick="reply(${comment_id}, ${parent}, ${page_id})">
+        <button type="button" class="a-comment-reply-button" value="Reply" onclick="reply(${comment_id}, ${parent}, ${page_id})">Reply</button>
       </div>
     `
   }
@@ -140,6 +140,11 @@ function enterComment(id, parent) {
 
 // Add a form to the page to submit a new reply/comment
 function reply(comment_id, parent, page_id) {
+  var el = document.getElementById("reply-box");
+  if (el != null) {
+    el.parentNode.removeChild(el);
+  }
+
   var something = `
     <form id="enter-reply">
       Name: <input type="text" name="author_name" maxlength="100" style="width: 100%; max-width: 100%">
@@ -148,7 +153,7 @@ function reply(comment_id, parent, page_id) {
       <input type="button" class="post-comment-button" value="Post reply" onclick="enterComment(${page_id}, ${parent})">
     </form>
   `
-  var hmm = document.createElement("div"); hmm.className = "enter-comment-container"; hmm.innerHTML = something;
+  var hmm = document.createElement("div"); hmm.className = "enter-comment-container"; hmm.id = "reply-box" hmm.innerHTML = something;
   var huh = document.getElementById(comment_id);
   huh.appendChild(hmm);
 }
