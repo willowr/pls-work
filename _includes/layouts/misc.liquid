@@ -1,0 +1,58 @@
+---
+title: Misc
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1/0">
+    <title>{{ title }}</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="site-mast">
+          <div class="site-mast-left">
+            <a href="../">
+              <img class="site-logo" src="/images/site_logo.png" alt="Relive">
+            </a>
+          </div>
+          <div class="site-mast-right">
+          </div>
+        </div>
+        <div class="site-nav">
+          <div class="site-nav-left">
+            <a class="site-nav-item" href="/">Home</a>
+            <a class="site-nav-item" href="/posts/">Archive</a>
+            <a class="site-nav-item" href="/tags/">Tags</a>
+          </div>
+          <div class="site-nav-right">
+            <a class="site-nav-item" href="/about/">About</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="parallax" style="background-image: url('/images/cat_lightbulb.jpg')">
+      <div class="parallax-title" id="ptitle">{{ title }}</div>
+      <div class="parallax-subtitle" id="psubtitle">{{ subtitle }}</div>
+      <script type="text/javascript">
+        $(function() {
+          var hm = -1 * document.getElementById('ptitle').clientWidth / 2;
+          var hmm = -1 * document.getElementById('psubtitle').clientWidth / 2;
+          document.getElementById('ptitle').style.marginLeft = hm.toString() + "px";
+          document.getElementById('psubtitle').style.marginLeft = hmm.toString() + "px";
+        });
+      </script>
+    </div>
+    <main class="site-main">
+      <div class="container">
+        {{ content }}
+      </div>
+    </main>
+  </body>
+</html>
