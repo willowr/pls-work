@@ -153,7 +153,7 @@ function reply(comment_id, parent, page_id) {
       <input type="button" class="post-comment-button" value="Post reply" onclick="enterComment(${page_id}, ${parent})">
     </form>
   `
-  var hmm = document.createElement("div"); hmm.className = "enter-comment-container"; hmm.id = "reply-box" hmm.innerHTML = something;
+  var hmm = document.createElement("div"); hmm.className = "enter-comment-container"; hmm.id = "reply-box"; hmm.innerHTML = something;
   var huh = document.getElementById(comment_id);
   huh.appendChild(hmm);
 }
