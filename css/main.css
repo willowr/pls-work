@@ -171,9 +171,9 @@ a.site-nav-item:hover {
 }
 
 .post-comment-button {
-  background-color: #adb8c2;
-  border: none;
-  color: white;
+  background-color: white;
+  border: 1px solid;
+  color: #ff4747;
   padding: 1vw 2vw;
   text-align: center;
   text-decoration: none;
@@ -182,8 +182,8 @@ a.site-nav-item:hover {
 }
 
 .post-comment-button:hover {
-  background-color: #e4e7eb;
-  color: #778899;
+  background-color: #ffd6d6;
+  color: #ff2424;
   cursor: pointer;
 }
 
@@ -214,8 +214,8 @@ a.site-nav-item:hover {
       padding-left: 2vw;
       padding-top: 1vw;
       padding-bottom: 1vw;
-      background-color: #e4e7eb;
-      border-top:1px solid #778899
+      background-color: #ffd6d6;
+      border-top:1px solid #ff2424;
     }
 
       .a-comment-author {
@@ -239,14 +239,20 @@ a.site-nav-item:hover {
       .a-comment-comment {
         margin: 0 20px 0 -10px;
         padding-left: 2vw;
-        border-left: 2px solid #f2f2f2;
+        border-left: 2px solid #ff8f8f;
         white-space: pre;
       }
 
+      .a-comment-comment-r {
+        margin: 0 20px 0 -10px;
+        padding-left: 2vw;
+        border-left: 2px solid #ff6b6b;
+      }
+
       .a-comment-reply-button {
-        background-color: #adb8c2;
-        border: none;
-        color: white;
+        background-color: white;
+        border: 1px solid;
+        color: #ff4747;
         padding: 1vw 1vw;
         text-align: center;
         text-decoration: none;
@@ -255,8 +261,8 @@ a.site-nav-item:hover {
       }
 
       .a-comment-reply-button:hover {
-        background-color: #e4e7eb;
-        color: #778899;
+        background-color: #ffd6d6;
+        color: #ff2424;
         cursor: pointer;
       }
 

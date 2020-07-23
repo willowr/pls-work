@@ -40,7 +40,7 @@ function addPost(author, date, content, comment_id, parent, page_id) {
         <div class="a-comment-date">${date}</div>
       </div>
       <div class="a-comment-bottom">
-        <div class="a-comment-comment">${content}</div>
+        <div class="a-comment-comment-r">${content}</div>
         <button type="button" class="a-comment-reply-button" value="Reply" onclick="reply(${comment_id}, ${parent}, ${page_id})">Reply</button>
       </div>
     `
