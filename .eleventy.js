@@ -9,6 +9,5 @@ module.exports = function(config) {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
   });
 
-  config.addCollection("tagList",
-  require("./views/_11ty/getTagList"));
+  config.addCollection("tagList", require("./_11ty/getTagList"));
 }
