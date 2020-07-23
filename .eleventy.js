@@ -3,7 +3,7 @@ module.exports = function(config) {
   config.addPassthroughCopy('js');
   config.addPassthroughCopy('images');
 
-  eleventyConfig.addFilter("readableDate", dateObj => {
+  config.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
   });
 }
