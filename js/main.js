@@ -118,9 +118,6 @@ function enterComment(id, parent) {
     var dd = String(today.getDate()).padStart(2, '0'); var mm = String(today.getMonth() + 1).padStart(2, '0'); var yyyy = today.getFullYear();
     today = mm + '/' + dd + '/' + yyyy;
 
-    // important: if a comment has NO PARENT (parent == "NONE"), then the div containing the netire thread will have the id, nto the inidvidaul comment :D
-    var parent-comment = document.getElementById("parent");
-
     myComment = {
       id: id,
       author_name: form.elements["author_name"].value,
