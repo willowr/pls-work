@@ -1,7 +1,7 @@
 ---
 layout: layouts/post
 title: Animations 7/23/2020
-subtitle: I failed life
+subtitle: Balloons :D 
 date: 2020-07-23
 author: fluffy
 id: 1
@@ -13,13 +13,9 @@ permalink: /posts/1/
 
 Cel animation is fun!
 
-Using Pencil2D (for animating) and VNC (to connect iPad to computer)
+Using Pencil2D (for animating) and VNC (to connect iPad to computer).
 
-First project: a person flying with a balloon, and then falling after hitting a wall?
-
-My inspiration came from watching a balloon fly up... and up... and up... And I wondered what it would look like if it could carry a person
-
-Then, of course, I didn't want the person to just fly out of the frame, so I had them hit a wall (it was also convenient for me to add a follow through :D), and then the person let go of the balloon and fall down, before finding a new one. Once they land on the ground and find a new balloon, they return to their original position (because I'm bored).
+First thing: a person flying with a balloon, and then falling after hitting a wall?
 
 Without color:
 
