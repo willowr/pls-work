@@ -105,7 +105,8 @@ function enterComment(id, parent) {
       comment_date: today,
       comment_content: form.elements["new_comment"].value,
       comment_id: new Date().getTime(),
-      comment_parent: "NONE"
+      comment_parent: "NONE",
+      site_id: 1
     }
 
     form.reset();
@@ -124,7 +125,8 @@ function enterComment(id, parent) {
       comment_date: today,
       comment_content: form.elements["new_comment"].value,
       comment_id: new Date().getTime(),
-      comment_parent: parent
+      comment_parent: parent,
+      site_id: 1
     }
 
     form.reset();

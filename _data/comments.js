@@ -6,7 +6,7 @@ var adminClient = new faunadb.Client({
 });
 
 function getComments() {
-    return adminClient.query(q.Paginate(q.Match(q.Index('page_id'), 1)))
+    return adminClient.query(q.Paginate(q.Match(q.Index('site_id'), 1)))
     .then((response) => {
         const linkRefs = response.data;
         const getAllLinksDataQuery = linkRefs.map((ref) => {
